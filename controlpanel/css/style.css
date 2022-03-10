@@ -1,0 +1,638 @@
+@import url(//db.onlinewebfonts.com/c/d12b463698a775a738ae9446ed924894?family=iCarly);
+
+* {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  font-family: icarly;
+}
+
+:root {
+  user-select: none;
+  height: 100%;
+  --pink: #f132ab ;
+  --lightestBlue: #08f5f6;
+  --yellow:  #f7f029;
+  --NickOrange: #f88f1f;
+  --remoteBlue: #3e67af;
+  --remoteDepthDarkBlue: #507bc6;
+  --redLight: #F1270B;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+/* IMAGE BACKGROUND AND AREA WHERE ANIMATIONS ARE SHOWN*/
+article {
+  width: 100%;
+  height: 100%;  
+  
+  overflow: hidden;
+
+  background-image: url(../images/iStudio.png);
+  background-size: cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+/* DISCOLIGHT */
+article > div:nth-of-type(1) { 
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  animation: discoLight 2s ease-in-out infinite; 
+  opacity: 25% !important;
+}
+
+@keyframes discoLight {
+  0% { background-color: var(--NickOrange) ; }
+  25% { background-color: var(--lightestBlue) ; }
+  50% { background-color: var(--yellow) ; }  
+  75% { background-color: var(--pink) ; }
+  100% { background-color: var(--NickOrange); }
+}
+
+/* article > div:nth-child(-n+2) {
+  position: relative;
+} */
+
+/* SAM'S ACTUAL REMOTE */
+ul {
+  display: flex;
+  flex-direction: column;
+
+  padding: .5em;
+  width: 12em;
+
+  position: absolute; 
+
+  background-color: var(--remoteDepthDarkBlue);
+  border-color: var(--remoteBlue);
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow:
+        1px 1px var(--remoteBlue),
+        2px 2px var(--remoteBlue),
+        3px 3px var(--remoteBlue),
+        4px 4px var(--remoteBlue),
+        5px 5px var(--remoteBlue),
+        6px 6px var(--remoteBlue),
+        7px 7px var(--remoteBlue),
+        8px 8px var(--remoteBlue),
+        9px 9px var(--remoteBlue),
+        10px 10px var(--remoteBlue),
+        12px 12px var(--remoteBlue),
+        13px 13px var(--remoteBlue),
+        14px 14px var(--remoteBlue),
+        15px 15px var(--remoteBlue),
+        16px 16px var(--remoteBlue),
+        17px 17px var(--remoteBlue),
+        18px 18px var(--remoteBlue),
+        19px 19px var(--remoteBlue),
+        20px 20px var(--remoteBlue);
+}
+
+/* ICARLY LOGO, WHICH IS THE FIRST LI */
+body ul li:first-child {
+  margin-bottom: 20px;
+  align-self: center;
+  position: relative;
+  display: inline-block;
+}
+
+header { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+  
+  font-size: 2.5em; 
+  line-height: 1.4em; 
+}
+
+header em {
+  background-color: var(--pink);
+  clip-path: polygon(0 0, 90% 40%, 90% 78%, 0 100%);
+
+  
+  height: 1em;
+  width: 2.9em;
+
+  position: absolute; 
+}
+
+h1 {
+  font-size: .87em;
+  color: var(--lightestBlue);
+  text-shadow: 4px 2px 4px #121458;
+
+  position: relative;
+}
+
+h1 span {
+  left:-10px ;
+  position: absolute;
+
+  font-size: 1em;
+  color: var(--yellow);
+  text-shadow: 4px 3px 4px #78441a;             
+}
+
+header:hover  {
+  animation-name: logo;
+  animation-duration:1s;  
+}
+
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CUSTOMIZE REMOTE CONTROL WITH YOUR OWN NAME EASTER EGG */
+blockquote, blockquote > p {
+  color: var(--yellow);
+  font-size: small;
+  line-height: small; 
+  word-spacing: .2em;
+}
+
+blockquote > p {
+  display:inline-block;
+}
+
+blockquote > p:hover {
+  background-color: var(--pink);
+}
+
+/* BUTTONS STYLING */
+p {
+  color: var(--pink);
+  font-size: 13px;
+}
+
+body ul li {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  position: relative;
+  border-radius: 0.3em;
+	border-top-right-radius: 0;
+}
+
+/* BUTTON IS ACTIVE RED LIGHT */
+body ul li div {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  margin: .9em;
+  display: flex;
+  align-self: center;
+  border-radius: 10px;
+}
+
+body ul li:nth-of-type(2) div {
+  box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+  width: 10px;
+  height: 10px;
+  margin: .9em;
+  display: flex;
+  align-self: center;
+  border-radius: 10px;
+}
+
+/* CLICKABLE BUTTON */
+input[type="checkbox"] {
+  display: none;
+}
+
+body ul li label {
+  background-color: var(--remoteDepthDarkBlue);
+  border: 0.4em;
+  
+  /* border-color: var(--remoteBlue);
+  border-style: solid;   */
+}
+
+label {
+  width: 3em;
+  height: 1em;
+  outline: none;
+  padding: 16px;
+  margin: 8px;
+  
+  cursor: pointer;
+  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;    
+
+  transition: all 0.2s ease-in-out;  
+
+  font-size: 19px;
+  border-radius: 8px;
+  color: #61677c;
+  box-shadow: -3px -3px 15px var(--remoteBlue),
+                3px 3px 10px var(--remoteBlue);
+  background: var(--remoteDepthDarkBlue);
+  background-color: var(--remoteDepthDarkBlue);
+  border: 0.4em;
+  border-color: var(--remoteBlue);
+  border-style: solid;    
+}
+
+label:hover{
+  box-shadow: -2px -2px 5px var(--remoteBlue),
+              2px 2px 5px var(--remoteBlue);              
+}
+
+label:active{
+  box-shadow: inset -1px -1px 2px var(--remoteBlue),
+              inset -1px -1px 2px var(--remoteBlue);           
+}
+
+/* RANDOM DANCING BUTTON, INTERACTION AND ANIMATION  */
+#redLightOn {	
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+
+/* SINCE THE OPACITY IS IMPORTANT FOR THE LIGHTS ANIMATION
+I DECIDED TO SWITCH THIS ONE UP BY HAVING IT ON 
+BY DEFAULT AND TURN THE LIGHT AND ANIMATION OF WHEN CHECKED */
+#redLightOn:checked ~ main li:nth-of-type(2) div {
+  background-color: black;
+  box-shadow: none;
+}
+  
+#redLightOn:checked ~ main article div:nth-child(1) {
+  opacity: 0 !important;
+}
+  
+#redLightOn:hover:before,#redLightOn:checked + #redLightOn:before {
+  top: 0;
+  box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
+}
+  
+#redLightOn:focus:before,#redLightOn:active:before {
+  top: -0.1em;
+  box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
+  border: none;
+}  
+
+
+/*  GIBBEEY BUTTON, INTERACTION AND ANIMATION   */
+
+
+#redLight2on {
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+/* WHEN CHECKED IT TURNS ON THE RED LIGHT */
+#redLight2on:checked ~ main li:nth-of-type(3) div{
+	box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+}
+
+/* WHEN CHECKED IT STARTS THE ANIMATION */
+#redLight2on:checked ~ main img {
+  animation-name: gibbyFalls;
+  animation: gibbyFalls 3s ease-out;
+  animation-iteration-count: infinite;
+}
+
+#redLight2on:hover:before,#redLight2on:checked + #redLight2on:before {
+	top: 0;
+	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
+}
+
+#redLight2on:focus:before,#redLight2on:active:before {
+	top: -0.1em;
+	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
+	border: none;
+}
+
+/* GIBBYY */
+img {
+  width: 40%;
+
+  position: relative;
+  top: -1000px;
+  left: 10em;
+}
+
+@keyframes gibbyFalls{
+  0%{ opacity: 1}
+  80%{ transform: translateY(112.6vh)}
+  100%{ transform: translateY(90.09vh)}
+}
+
+
+/*  SPENCER LIGHTS IT ON FIRE BUTTON, INTERACTION AND ANIMATION   */
+
+
+#redLight3on {
+	/* left: 9px; */
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+
+/* WHEN CHECKED IT TURNS ON THE RED LIGHT */
+#redLight3on:checked ~ main li:nth-of-type(4) div {
+  box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+}
+
+/* WHEN CHECKED IT SHOWS THE FIRE ANIMATION */
+#redLight3on:checked ~ main article section {
+  opacity: 1;
+}
+
+#redLight3on:checked ~ main article section:nth-of-type(1) {
+  transition-delay: 100ms;
+}
+
+#redLight3on:checked ~ main article section:nth-of-type(2) {
+  transition-delay: 1s;
+}
+
+#redLight3on:checked ~ main article section:nth-of-type(3) {
+  transition-delay: 2s;
+}
+
+#redLight3on:checked ~ main article section:nth-of-type(4) {
+  transition-delay: 3s;
+}
+
+#redLight3on:hover:before,#redLight3on:checked + #redLight3on:before {
+	top: 0;
+	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
+}
+
+#redLight3on:focus:before,#redLight3on:active:before {
+	top: -0.1em;
+	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
+	border: none;
+}
+
+
+/* FIRES*/
+
+section:nth-of-type(1){
+  top: 20em;
+  left: 8em; 
+}
+
+section:nth-of-type(2){
+  top: 35em;
+  left: 70em;
+}
+
+section:nth-of-type(3){
+  top: 22em;
+  left: 20em;
+}
+
+section:nth-of-type(4){
+  top: 25em;
+  left: 50em;
+}
+
+/* FIRE STYLING */
+section { 
+  opacity: 0;
+  position: absolute;
+  animation-name: fire;
+  animation-delay: 100ms;
+  animation-duration: 3ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+section div:nth-of-type(-n+4) {
+  bottom: 0;
+  position: absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg) scale(1.5,1.5);
+}
+
+section div:nth-of-type(1){
+  left: 5px;
+  width: 70px;
+  height: 70px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 5px OrangeRed;
+}
+
+section div:nth-of-type(2){
+  left: 10px; 
+  width: 60px;
+  height: 60px;
+  background: orange;
+  box-shadow: 0px 0px 10px 5px orange;
+}
+
+section div:nth-of-type(3){
+  left: 15px; 
+  width: 50px;
+  height: 50px;
+  background: gold;
+  box-shadow: 0px 0px 10px 5px gold;
+}
+
+section div:nth-of-type(4){
+  left: 15px; 
+  bottom: -4px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-shadow: 0px 0px 10px 5px white;
+}
+
+@keyframes fire{
+  0%   {transform: rotate(-2deg);}
+  20%  {transform: rotate(2deg);}
+  40%  {transform: rotate(-2deg);}
+  60%  {transform: rotate(2deg) scaleY(1.10);}
+  80%  {transform: rotate(-2deg) scaleY(0.9);}
+  100% {transform: rotate(2deg);}
+}
+
+
+/*  BUTTON 4 , INTERACTION AND ANIMATION   */
+
+
+#redLight4on {
+	/* left: 9px; */
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+
+/* WHEN CHECKED IT TURNS ON THE RED LIGHT */
+#redLight4on:checked ~ main li:nth-of-type(5) div {
+	box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+}
+
+/* WHEN CHECKED IT SHOWS THE ANIMATION */
+#redLight4on:checked ~ main article > div:nth-of-type(2){
+  opacity: 1;
+  animation-name: hammer;
+  animation-duration: 1s ;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+}
+
+#redLight4on:hover:before,#redLight4on:checked + #redLight4on:before {
+	top: 0;
+	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
+}
+
+#redLight4on:focus:before,#redLight4on:active:before {
+	top: -0.1em;
+	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
+	border: none;
+}
+
+/* HAMMER ANIMATION */
+article > div:nth-of-type(2) {
+  opacity: 0;
+  position:absolute;
+  
+  width: .6em;
+  height: 3.5em;
+  background-color: #d49b70;
+  top: 4em;
+  left: 5em;
+}
+
+article > div:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  top: -.6em;
+  left: -1em;
+  width: 2em ;
+  height: 1em;
+  clip-path: polygon(46% 50%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
+  background-color: steelblue;
+}
+
+@keyframes hammer {
+    from {
+        transform:rotate(0deg);   
+    }
+    to {
+        transform:rotate(360deg);
+    }
+    
+    from {  left: 0;
+    }
+    to {
+      left: 25em;
+    }
+}
+
+/* RESPONSIVE OP IPHONE 8 PLUS */
+
+@media (max-width:40em) { 
+  body {
+    background-color: #80cde8;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: start;
+    gap:1em;
+  }
+ 
+  article {
+    height:auto;
+    aspect-ratio: 2301/1066;
+    flex-shrink: 0;
+  }
+  
+  ul {
+    position:relative;
+  }
+
+  img {
+    width: 30%;
+  
+    position: relative;
+    top: -500px;
+    left: 6em;
+  }
+  
+  @keyframes gibbyFalls {
+    0%{ opacity: 1}
+    80%{ transform: translateY(400px)}
+    100%{ transform: translateY(340px)}
+  }
+
+/* POSITION OF THE FIRE */
+  section:nth-of-type(1){
+    top: 12em;
+    left: 8em; 
+  
+  }
+
+  section:nth-of-type(2){
+    top: 9em;
+    left: 18em;
+  }
+
+  section:nth-of-type(3){
+    top: 6em;
+    left: 10em;
+  }
+
+  section:nth-of-type(4){
+    top: 12em;
+    left: 25em;
+  }
+
+  /* FIRE SIZE */
+  section div:nth-of-type(1){
+    width: 6.15vw;
+    height: 6.15vh;
+  }
+  
+  section div:nth-of-type(2){
+    width: 4.8vw;
+    height: 4.8vh;
+  }
+  
+  section div:nth-of-type(3){
+    width: 3.5vw;
+    height: 3.55vh;
+  }
+  
+  section div:nth-of-type(4){ 
+    bottom: -4px;
+    width: 3.55vw;
+    height: 3.5vh;
+  }
+  
+  
+}
