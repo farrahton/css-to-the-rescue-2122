@@ -26,8 +26,6 @@ Waar ik wel tegenaan liep was - zoals verwacht - het positioneren van de li's. Z
 - <strong> Geluid met pure CSS </strong>
 In de iCarly show wordt de controller vooral vaak gebruikt voor een stem die Random Dancing zegt en disco lampjes. Dit wilde ik ook toepassen in mijn control panel. Er is een 'illegale' manier om geluid af te spelen met alleen CSS. Dit heb ik geprobeerd te doen, maar op de manier waarop ik het wilde toepassen, lukte het niet. Ik dacht namelijk de video met opacity 0 te plaatsen over de knop, zodat je er op klikt en dan de video afspeelt. Helaas was dit een mislukte poging, want daardoor werkten de states van de button (hover, focus) dan niet meer en kon ik met dezelfde knop nog een andere animatie activeren. 
 
-Experiment was gebaseerd op: https://codepen.io/robertspier/pen/oNoWoZE?editors=1100
-
 - <strong> Vuur keyframe </strong>
 Voor een vuur animatie die ik op basis van de terugkerende grap in de iCarly show dat Spencer van alles per ongeluk in vuur steekt, vond ik het maken van een subjectief mooie vlam lastig.
 
@@ -80,4 +78,9 @@ Heel snel nog in het kort:
 
 # Bronnen
 
-Veel uit de themasessies gehaald en de met hulp/inzichten van docenten, gastcolleges en klasgenoten.  Verder heb ik voor de vlammen dit voorbeeld gebruikt op codepen.io: https://codepen.io/dazulu/details/nPeEeG 
+https://cmda-minor-web.github.io/css-to-the-rescue-2122/themas.html
+https://codepen.io/robertspier/pen/oNoWoZE?editors=1100
+https://codepen.io/dazulu/details/nPeEeG 
+https://bennettfeely.com/clippy/ 
+https://getcssscan.com/css-box-shadow-examples
+
