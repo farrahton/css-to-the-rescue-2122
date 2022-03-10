@@ -78,9 +78,9 @@ Heel snel nog in het kort:
 
 # Bronnen
 
-https://cmda-minor-web.github.io/css-to-the-rescue-2122/themas.html
-https://codepen.io/robertspier/pen/oNoWoZE?editors=1100
-https://codepen.io/dazulu/details/nPeEeG 
-https://bennettfeely.com/clippy/ 
-https://getcssscan.com/css-box-shadow-examples
+- https://cmda-minor-web.github.io/css-to-the-rescue-2122/themas.html
+- https://codepen.io/robertspier/pen/oNoWoZE?editors=1100
+- https://codepen.io/dazulu/details/nPeEeG 
+- https://bennettfeely.com/clippy/ 
+- https://getcssscan.com/css-box-shadow-examples
 
