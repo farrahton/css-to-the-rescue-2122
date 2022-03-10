@@ -78,4 +78,9 @@ Heel snel nog in het kort:
 
 # Bronnen
 
-Veel uit de themasessies gehaald en de met hulp/inzichten van docenten, gastcolleges en klasgenoten.  Verder heb ik voor de vlammen dit voorbeeld gebruikt op codepen.io: https://codepen.io/dazulu/details/nPeEeG 
+https://cmda-minor-web.github.io/css-to-the-rescue-2122/themas.html
+https://codepen.io/robertspier/pen/oNoWoZE?editors=1100
+https://codepen.io/dazulu/details/nPeEeG 
+https://bennettfeely.com/clippy/ 
+https://getcssscan.com/css-box-shadow-examples
+
