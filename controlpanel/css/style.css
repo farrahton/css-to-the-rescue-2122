@@ -520,20 +520,19 @@ article > div:nth-of-type(2) {
   opacity: 0;
   position:absolute;
   
-  width: .6em;
-  height: 3.5em;
+  width: 1em;
+  height: 6em;
   background-color: #d49b70;
-  top: 4em;
-  left: 5em;
+  top: 12em;
 }
 
 article > div:nth-of-type(2)::before {
   content: '';
   position: absolute;
-  top: -.6em;
-  left: -1em;
-  width: 2em ;
-  height: 1em;
+  top: -3em;
+  left: -1.6em;
+  width: 4em ;
+  height: 3em;
   clip-path: polygon(46% 50%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
   background-color: steelblue;
 }
@@ -549,7 +548,7 @@ article > div:nth-of-type(2)::before {
     from {  left: 0;
     }
     to {
-      left: 25em;
+      left: 65em;
     }
 }
 
@@ -633,6 +632,33 @@ article > div:nth-of-type(2)::before {
     width: 3.55vw;
     height: 3.5vh;
   }
+
+  /* HAMMER THROW SIZING */
+  article > div:nth-of-type(2) {    
+    width: .6em;
+    height: 3.5em;
+    top: 4em;
+  }
+
+  article > div:nth-of-type(2)::before { 
+    top: -.6em;
+    left: -1em;
+    width: 2em ;
+    height: 1em;
+  }
   
-  
+  @keyframes hammer {
+    from {
+        transform:rotate(0deg);   
+    }
+    to {
+        transform:rotate(360deg);
+    }
+    
+    from {  left: 0;
+    }
+    to {
+      left: 25em;
+    }
+}
 }
