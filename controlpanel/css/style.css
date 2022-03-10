@@ -352,7 +352,6 @@ img {
 
 
 #redLight3on {
-	/* left: 9px; */
   width: 400px;
   height: 400px;
   visibility: hidden;
@@ -486,7 +485,6 @@ section div:nth-of-type(4){
 
 
 #redLight4on {
-	/* left: 9px; */
   width: 400px;
   height: 400px;
   visibility: hidden;
@@ -543,7 +541,8 @@ article > div:nth-of-type(2)::before {
   height: 3em;
 
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-  clip-path: polygon(46% 50%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(0 100%, 0 50%, 50% 50%, 100% 100%, 0% 100%);
+
   background-color: steelblue;
 }
 
@@ -561,6 +560,7 @@ article > div:nth-of-type(2)::before {
       left: 65em;
     }
 }
+
 
 
 
@@ -656,7 +656,7 @@ article > div:nth-of-type(2)::before {
 
   article > div:nth-of-type(2)::before { 
     top: -.6em;
-    left: -1em;
+    left: -0.4em;
     width: 2em ;
     height: 1em;
   }

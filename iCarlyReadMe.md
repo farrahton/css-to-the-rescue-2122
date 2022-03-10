@@ -10,39 +10,77 @@ Eigenlijk is dit vak in zijn geheel een uitdaging. Ik heb namelijk zo goed als g
 
 Ik ga aan de slag met input checkboxes als buttons, omdat ik verschillende opties tegelijk aan wil kunnen zetten. Dingen positioneren vind ik ook erg intimiderend, dus dat wordt zeker een uitdaging.
 
-- <strong> Schets(en) van mijn ontwerp </strong>
+<details>
+<summary>Visueel ontwerp waarop het gebaseerd is</summary>
 <img src="procesImages/ontwerp1.jpeg" alt="ontwerp sam's remote control" /> 
 <img src="procesImages/ontwerp2.jpg" alt="ontwerp sam's remote control"/> 
 
-Het wordt een mix van de twee verschillende foto's.
+Het wordt een mix van deze twee verschillende foto's.
+
+Logo van iCarly met huisstijl kleuren. Op basis hiervan heb ik na een themasessie hier custom properties van gemaakt: 
+<img src="procesImages/icarlylogo.jpeg" alt="iCarly logo"/> 
+
+</details>
+
+
+<br>
 
 # Week 2 & 3
 
 - <strong> Remote controle & positioneren </strong>
+
 Ik ben begonnen met het maken van de remote control. In de eerste instantie wilde ik beginnen met divs voor de knopjes, maar nadat ik bij WAFS een ul had gebruikt, vond ik dit ook een handige benadering. Vooral na het leren van de term semantisch HTMl.
 
 Waar ik wel tegenaan liep was - zoals verwacht - het positioneren van de li's. Ze kwamen niet op de volgorde die ik wilde. Wat bleek, ik hoefde alleen flex-direction: row-reverse; te gebruiken om de plek van de red light en plek van de button om te draaien in de twee kolommen. 
 
 - <strong> Geluid met pure CSS </strong>
+
 In de iCarly show wordt de controller vooral vaak gebruikt voor een stem die Random Dancing zegt en disco lampjes. Dit wilde ik ook toepassen in mijn control panel. Er is een 'illegale' manier om geluid af te spelen met alleen CSS. Dit heb ik geprobeerd te doen, maar op de manier waarop ik het wilde toepassen, lukte het niet. Ik dacht namelijk de video met opacity 0 te plaatsen over de knop, zodat je er op klikt en dan de video afspeelt. Helaas was dit een mislukte poging, want daardoor werkten de states van de button (hover, focus) dan niet meer en kon ik met dezelfde knop nog een andere animatie activeren. 
 
 - <strong> Vuur keyframe </strong>
+
 Voor een vuur animatie die ik op basis van de terugkerende grap in de iCarly show dat Spencer van alles per ongeluk in vuur steekt, vond ik het maken van een subjectief mooie vlam lastig.
 
 Er zijn verschillende wegen naar Rome en de weg die ik mooi vond was niet passend bij dit vak: een svg path. Daarom heb ik het met border radius gedaan.
 
 Waar ik wel tegenaan loop is in de media query grootte de vlammen ook kleiner te krijgen. Om de een of andere reden lukt dit niet op de manier die ik wil. Het maakt niet uit welk eenheid ik gebruikt vh/vw, em, rem, percentage, pixels werken allemaal niet. Met de huidige benadering is de vlam nu een beetje schuin. Iets waar ik niet heel tevreden mee ben.
 
+<details>
+<summary>Schuine vlam visueel</summary>
+<img src="procesImages/schuinVlam.png" alt="schuine vlam"/> 
+
+Ook goed om te weten is dat dit gebaseerd is op een herhaalde grap in de show dat Spencer vaak dingen perongeluk in vuur steekt. 
+https://icarly.fandom.com/wiki/Spencer_Shay 
+
+</details>
+<br>
+
 - <strong> Gibby fall, hammer throw & Random Dancing </strong>
-Hier heb ik met ::before gewerkt en hoe dit heel handig kan zijn voor tekeningen of vormpjes die moeten overlappen.
+
+Voor de hamer heb ik met ::before gewerkt en hoe dit heel handig kan zijn voor tekeningen of vormpjes die moeten overlappen. Op deze manier past een animatie het ook toe op het geheel ipv op bijvoorbeeld twee losse divs.
+
+<details>
+<summary>Waarop de hamer is gebaseerd</summary>
+<img src="procesImages/Hammer_on_the_wall.webp" alt="hamer op de muur"/>  
+https://icarly.fandom.com/wiki/Fan_of_Hammers 
+</details>
+<br>
 
 Ik had het al voor een eerder experiment geprobeerd, namelijk een hele simpele 'disco bal'. Gewoon een circle met een linear gradient en een straal met de discolichten in plaats van zoals het nu over het hele scherm is geworden. Alleen vond ik de bal niet zo mooi, waardoor ik het geschrapt heb en het maar over de hele foto heb gedaan. 
 
 Een link naar dit experiment: https://codepen.io/farrahton/pen/eYeqGMx 
 
-Tot nu toe brandde het lampje als je op de knop drukte. Dit had als effect dat de opacity van 0 naar 1 ging. Voor de disco lights heb ik echter al een opacity styling nodig, zodat je niet alleen de kleuren ziet. Daarom staat random dancing by default wel al aan. Alsnog werkte de opacity niet. Tijdens het gastcollege van Bram Strum ging het heel even over !important. Ik ging dit proberen toe te passen en met heel veel mazzel werkte dit wel.
+Tot nu toe brandde het lampje pas als je op de knop hebt gedrukt. Dit had als effect dat de opacity van 0 naar 1 ging en de animaties zichtbaar worden. Voor de disco lights heb ik echter al een opacity styling nodig, zodat je niet alleen de kleuren ziet. Daarom staat random dancing by default wel al aan. Alsnog werkte de opacity niet. Tijdens het gastcollege van Bram Strum ging het heel even over !important. Ik ging dit proberen toe te passen hierdoor werkte het wel.
+
+<details>
+<summary> Waarop de Gibby val is gebaseerd </summary>
+<img src="procesImages/gibbyfallsfromceiling.jpg" alt="Gibby valt"/> Een meme over de show waarin Gibby van het plafond valt. 
+https://knowyourmeme.com/memes/gibby-falls-from-ceiling 
+</details>
+<br>
 
 - <strong> Responsive Design </strong>
+
 Zoals ik aan het begin al zei, vind ik dingen op de juist plek positioneren erg uitdagend. Daarom was een responsive design niet in mijn gedachten, totdat Sanne hierover begon. Ik ging eerst uitzoeken wat de term media query is en hoe je het gebruikt om een responsive design te maken. Ik dacht een klein begin te hebben gemaakt hierin, maar miste nog veel dingen. Aangezien Sanne heel lief tijd aan mij heeft besteed door mij hiermee te helpen, heb ik veel nieuwe inzichten gekregen:
 
   - Een media query gebruiken voor responsiveness hoeft niet veel code te bevatten
@@ -56,11 +94,7 @@ Zoals ik aan het begin al zei, vind ik dingen op de juist plek positioneren erg 
 
 In de eerste weken had ik een afbeelding van de studio gebruikt, maar met de cartoon-ish animaties vond ik dit niet meer mooi. Daarom heb ik een cartoon versie gebruikt.
 
-- Gibby valt
-- Hamer animatie 
-- Alle animaties goed positioneren 
-- Code opschonen
-De manier waarop ik in de eerste 2 weken code schreef is nu al anders ten opzichte van mijn huidige manier. In deze laatste week merkte ik al dat ik heel veel dubbele, nutteloze of te lange code had. 
+De manier waarop ik in de eerste 2 weken code schreef is nu al anders ten opzichte van mijn huidige manier. In deze laatste week merkte ik al dat ik heel veel dubbele, nutteloze of te lange code had.
 
 - <strong> Wat ik nog zou willen toepassen</strong>
 
@@ -69,12 +103,13 @@ Als ik nog tijd had zou ik graag nog een extra button maken om het plaatje van d
 Ohja en volgens mij zit er een bug in mijn code, want soms laadt het niet de donkerste oranjes van de vlammen. Pas na de pagina refreshen en weer op de knop ervoor te klikken komt het goed in beeld. 
 
 -<strong> Wat ik ga meenemen</strong>
+
 In principe alles, want ik heb door dit vak een hele nieuwe taal geleerd. Ik merkte vaak genoeg al dat ik de specifieke selectoren ook wilde gebruiken voor WAFS, terwijl ik daar wel classes en ID's mocht gebruiken. De kans is dus groot dat ik de kracht van specifieke selectoren veel ga toepassen in de toekomst. Verder wil ik de subtielere animaties en andere mogelijkheden in CSS die in alledaagse websites voorkomen nog eens uitproberen. Er waren een paar in de themasessies voorgekomen, maar die waren niet per se relevant voor mijn control panel.
 
 Heel snel nog in het kort:
 - Soepeler dan verwacht ging het überhaupt oppikken van coderen.
 - Het lastigste vind ik responsive positioneren en het zoeken van wat ik nou in gedachten heb. Vaak weet ik de exacte codeer termen niet waarmee ik de juiste zoekresultaten zou krijgen.
-- Ik ben ontzettend trots op het feit dat ik in zo kort tijd enorme stappen heb gezet voor mijn gevoel. Voorafgaan de minor kon ik alleen kleurtjes veranderen en verder niets. Deze kleurtjes kwamen toen ook niet eens op de elementen waarop ik ze wilde hebben, omdat ik nog niets wist over de specifieke selectoren. Animaties leek toen magie die alleen gevorderden en experts bezitten, maar nu kan ik het ook een beetje.
+- Ik ben ontzettend trots op het feit dat ik in zo kort tijd enorme stappen heb gezet voor mijn gevoel. Voorafgaan de minor kende ik alleen h1, h2... en color:. Toen ik d kleur wilde veranderen kwamen ze zelfs niet eens op de elementen waarop ik ze exact wilde hebben, omdat ik nog niets wist over specifieke selectoren. Animaties maken leek toen magie die alleen gevorderden en experts bezitten, maar nu kan ik het ook een beetje.
 
 # Bronnen
 
