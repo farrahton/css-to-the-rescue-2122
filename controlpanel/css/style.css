@@ -46,29 +46,6 @@ article {
   background-repeat:no-repeat;
 }
 
-/* DISCOLIGHT */
-article > div:nth-of-type(1) { 
-  width: 100%;
-  height: 100%;
-
-  position: relative;
-
-  animation: discoLight 2s ease-in-out infinite; 
-  opacity: 25% !important;
-}
-
-@keyframes discoLight {
-  0% { background-color: var(--NickOrange) ; }
-  25% { background-color: var(--lightestBlue) ; }
-  50% { background-color: var(--yellow) ; }  
-  75% { background-color: var(--pink) ; }
-  100% { background-color: var(--NickOrange); }
-}
-
-/* article > div:nth-child(-n+2) {
-  position: relative;
-} */
-
 /* SAM'S ACTUAL REMOTE */
 ul {
   display: flex;
@@ -83,6 +60,7 @@ ul {
   border-color: var(--remoteBlue);
   border-style: solid;
   border-radius: 10px;
+  
   box-shadow:
         1px 1px var(--remoteBlue),
         2px 2px var(--remoteBlue),
@@ -249,9 +227,7 @@ label {
   font-size: 19px;
   border-radius: 8px;
   color: #61677c;
-  box-shadow: -3px -3px 15px var(--remoteBlue),
-                3px 3px 10px var(--remoteBlue);
-  background: var(--remoteDepthDarkBlue);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  background: var(--remoteDepthDarkBlue);
   background-color: var(--remoteDepthDarkBlue);
   border: 0.4em;
   border-color: var(--remoteBlue);
@@ -298,6 +274,24 @@ BY DEFAULT AND TURN THE LIGHT AND ANIMATION OF WHEN CHECKED */
   border: none;
 }  
 
+/* DISCOLIGHT */
+article > div:nth-of-type(1) { 
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  animation: discoLight 2s ease-in-out infinite; 
+  opacity: 25% !important;
+}
+
+@keyframes discoLight {
+  0% { background-color: var(--NickOrange) ; }
+  25% { background-color: var(--lightestBlue) ; }
+  50% { background-color: var(--yellow) ; }  
+  75% { background-color: var(--pink) ; }
+  100% { background-color: var(--NickOrange); }
+}
 
 /*  GIBBEEY BUTTON, INTERACTION AND ANIMATION   */
 
@@ -552,7 +546,7 @@ article > div:nth-of-type(2)::before {
     }
 }
 
-/* RESPONSIVE OP IPHONE 8 PLUS */
+/* RESPONSIVE */
 
 @media (max-width:40em) { 
   body {
