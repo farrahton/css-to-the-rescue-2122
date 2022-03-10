@@ -518,7 +518,7 @@ section div:nth-of-type(4){
 /* HAMMER ANIMATION */
 article > div:nth-of-type(2) {
   opacity: 0;
-  position:absolute;
+  position: absolute;
   
   width: 1em;
   height: 6em;
