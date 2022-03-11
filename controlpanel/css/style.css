@@ -60,7 +60,9 @@ ul {
   border-color: var(--remoteBlue);
   border-style: solid;
   border-radius: 10px;
+  /* box-shadow: [horizontal offset] [vertical offset] [blur radius](not needeed for this case) [optional spread radius] [color]; using another line with - infront of the numbers would also add it to the other side  */
   box-shadow:
+        1px 1px var(--remoteBlue),
         1px 1px var(--remoteBlue),
         2px 2px var(--remoteBlue),
         3px 3px var(--remoteBlue),
@@ -144,7 +146,7 @@ header:hover  {
   }
 }
 
-/* CUSTOMIZE REMOTE CONTROL WITH YOUR OWN NAME EASTER EGG */
+/* CUSTOMIZE REMOTE CONTROL WITH YOUR OWN NAME EASTER EGG, USING > SINCE IT'S THE CHILD OF THE BLOCKQUOTE */
 blockquote, blockquote > p {
   color: var(--yellow);
   font-size: small;
@@ -192,13 +194,19 @@ body ul li div {
 }
 
 body ul li:nth-of-type(2) div {
-  box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
   width: 10px;
   height: 10px;
   margin: .9em;
+  
   display: flex;
   align-self: center;
   border-radius: 10px;
+  box-shadow: 
+              inset 0 0 0.5em 0.2em var(--redLight),
+              0 0 0.5em #F1550B,
+              -0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),
+              0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+
 }
 
 /* CLICKABLE BUTTON */
@@ -235,8 +243,11 @@ label {
   border-radius: 8px;
   border-color: var(--remoteBlue);
   border-style: solid;  
-  
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  background: var(--remoteDepthDarkBlue);
+  box-shadow: 
+            rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  
+  background: var(--remoteDepthDarkBlue);
 
 }
 
@@ -268,19 +279,6 @@ BY DEFAULT AND TURN THE LIGHT AND ANIMATION OF WHEN CHECKED */
 #redLightOn:checked ~ main article div:nth-child(1) {
   opacity: 0 !important;
 }
-  
-#redLightOn:hover:before,#redLightOn:checked + #redLightOn:before {
-  top: 0;
-
-  box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
-}
-  
-#redLightOn:focus:before,#redLightOn:active:before {
-  top: -0.1em;
-
-  box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
-  border: none;
-}  
 
 /* DISCOLIGHT */
 article > div:nth-of-type(1) { 
@@ -311,7 +309,11 @@ article > div:nth-of-type(1) {
 }
 /* WHEN CHECKED IT TURNS ON THE RED LIGHT */
 #redLight2on:checked ~ main li:nth-of-type(3) div{
-	box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+	box-shadow: 
+              inset 0 0 0.5em 0.2em var(--redLight),
+              0 0 0.5em #F1550B,
+              -0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),
+              0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
 }
 
 /* WHEN CHECKED IT STARTS THE ANIMATION */
@@ -321,16 +323,6 @@ article > div:nth-of-type(1) {
   animation-iteration-count: infinite;
 }
 
-#redLight2on:hover:before,#redLight2on:checked + #redLight2on:before {
-	top: 0;
-	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
-}
-
-#redLight2on:focus:before,#redLight2on:active:before {
-	top: -0.1em;
-	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
-	border: none;
-}
 
 /* GIBBYY */
 img {
@@ -359,7 +351,11 @@ img {
 
 /* WHEN CHECKED IT TURNS ON THE RED LIGHT */
 #redLight3on:checked ~ main li:nth-of-type(4) div {
-  box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+  box-shadow: 
+              inset 0 0 0.5em 0.2em var(--redLight),
+              0 0 0.5em #F1550B,
+              -0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),
+              0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
 }
 
 /* WHEN CHECKED IT SHOWS THE FIRE ANIMATION */
@@ -381,17 +377,6 @@ img {
 
 #redLight3on:checked ~ main article section:nth-of-type(4) {
   transition-delay: 3s;
-}
-
-#redLight3on:hover:before,#redLight3on:checked + #redLight3on:before {
-	top: 0;
-	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
-}
-
-#redLight3on:focus:before,#redLight3on:active:before {
-	top: -0.1em;
-	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
-	border: none;
 }
 
 
@@ -492,7 +477,11 @@ section div:nth-of-type(4){
 
 /* WHEN CHECKED IT TURNS ON THE RED LIGHT */
 #redLight4on:checked ~ main li:nth-of-type(5) div {
-	box-shadow: inset 0 0 0.5em 0.2em var(--redLight),0 0 0.5em #F1550B,-0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
+	box-shadow: 
+              inset 0 0 0.5em 0.2em var(--redLight),
+              0 0 0.5em #F1550B,
+              -0.1em -0.1em 0.1em rgba(0, 0, 0, 0.3),
+              0.1em 0.1em 0.1em rgba(255, 255, 255, 0.1);
 }
 
 /* WHEN CHECKED IT SHOWS THE ANIMATION */
@@ -502,17 +491,6 @@ section div:nth-of-type(4){
   animation-duration: 1s ;
   animation-fill-mode: forwards;
   animation-timing-function: linear; 
-}
-
-#redLight4on:hover:before,#redLight4on:checked + #redLight4on:before {
-	top: 0;
-	box-shadow: 0 -0.2em 0 #665E64,0 0.2em 0.6em -0.3em rgba(0, 0, 0, 0.69);
-}
-
-#redLight4on:focus:before,#redLight4on:active:before {
-	top: -0.1em;
-	box-shadow: 0 -0.1em 0 #665E64,0 0.1em 0.6em -0.3em rgba(0, 0, 0, 0.69), inset 0 0.2em 1em rgba(0, 0, 0, 0.07);
-	border: none;
 }
 
 /* HAMMER ANIMATION */
@@ -526,9 +504,11 @@ article > div:nth-of-type(2) {
   height: 6em;
 
   border-radius: 0 0 10% 10%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: 
+            rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+            rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   background-color: #d49b70;
-  
 }
 
 article > div:nth-of-type(2)::before {
@@ -540,7 +520,9 @@ article > div:nth-of-type(2)::before {
   width: 4em ;
   height: 3em;
 
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  box-shadow: 
+            rgba(9, 30, 66, 0.25) 0px 1px 1px, 
+            rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   clip-path: polygon(0 100%, 0 50%, 50% 50%, 100% 100%, 0% 100%);
 
   background-color: steelblue;

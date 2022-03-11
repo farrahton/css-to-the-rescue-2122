@@ -118,4 +118,7 @@ Heel snel nog in het kort:
 - https://codepen.io/dazulu/details/nPeEeG 
 - https://bennettfeely.com/clippy/ 
 - https://getcssscan.com/css-box-shadow-examples
+- https://css-tricks.com/almanac/properties/b/box-shadow/
+- https://learntutorials.net/nl/css/topic/1746/box-shadow 
+
 
